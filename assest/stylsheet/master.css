@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e0e0e0;
+  font-size: 40px;
+}
+
+#stopwatch {
+  width: 320px;
+  margin: 100px auto 15px;
+  padding: 50px 15px 35px;
+  text-align: center;
+  border-radius: 40px;
+  box-shadow: 6px -6px 8px #9d9d9d, -6px 6px 8px #fff;
+}
+#stopwatch .maintime span {
+  padding: 5px 10px;
+  text-align: center;
+  border-radius: 50%;
+  margin-right: 10px;
+  box-shadow: 6px -6px 8px #9d9d9d, -6px 6px 8px #fff;
+}
+#stopwatch div:nth-of-type(2) button {
+  text-transform: capitalize;
+  border: none;
+  width: 90px;
+  height: 50px;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 50px;
+  box-shadow: 6px -6px 8px #9d9d9d, -6px 6px 8px #fff;
+  margin-right: 2px;
+}
+#stopwatch div:nth-of-type(2) #start {
+  background-color: aquamarine;
+}
+#stopwatch div:nth-of-type(2) #start:hover {
+  background-color: rgb(76, 223, 174);
+}
+#stopwatch div:nth-of-type(2) #stop {
+  background-color: rgb(255, 94, 94);
+}
+#stopwatch div:nth-of-type(2) #stop:hover {
+  background-color: rgb(223, 59, 59);
+}
+#stopwatch div:nth-of-type(2) #reset {
+  background-color: rgb(252, 239, 125);
+}
+#stopwatch div:nth-of-type(2) #reset:hover {
+  background-color: rgb(230, 216, 91);
+}
+#stopwatch div:nth-of-type(2) #record {
+  margin-top: 35px;
+  width: 200px;
+}
+#stopwatch div:nth-of-type(2) ul li {
+  width: 265px;
+  font-size: 42px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h4 {
+  font-size: 22px;
+  color: rgb(31, 31, 31);
+  display: flex;
+  justify-content: center;
+}
+h4 a {
+  color: rgb(0, 0, 143);
+  text-decoration: none;
+}
+h4 a:hover {
+  color: rgb(35, 35, 211);
+}/*# sourceMappingURL=master.css.map */

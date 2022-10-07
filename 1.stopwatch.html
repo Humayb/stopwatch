@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assest/stylsheet/master.css">
+    <title>StopWatch - humayb</title>
+</head>
+<body>
+    <main id="stopwatch">
+        <div class="maintime">
+            <span id="minute">00</span>
+            <span id="second">00</span>
+            <span id="millisecond">00</span>
+        </div>
+
+        <br>
+
+        <div>
+            <button id="start" data-status="start">start</button>
+            <button id="stop">stop</button>
+            <button id="reset" >reset</button>
+            <button id="record">record</button>
+            <ul id="list-record"></ul>
+        </div>
+
+    </main>
+    <h4>Developer: 
+        <a href="http://humayb.com/">Homa Bahramparvar</a>
+    </h4>
+</body>
+
+<script>
+    let ms = 0
+    let s = 0
+    let m = 0
+
+    let _span = document.querySelectorAll('.maintime>span')
+
+
+
+    document.getElementById('start').addEventListener('click',function(e){
+        if(((e.target).getAttribute("data-status")) == 'start'){
+            temp =  setInterval(time,10)
+            e.target.setAttribute('data-status', 'start1')
+        }
+       
+    })
+    document.getElementById('stop').addEventListener('click',function(){
+        clearInterval(temp)
+    })
+
+
+    document.getElementById('stop').addEventListener('click',function stop(){
+        clearInterval(temp)
+        document.getElementById('start').setAttribute('data-status', 'start')
+    })
+
+
+    document.getElementById('record').addEventListener('click', function(){
+        let _li = document.createElement('li')
+        _li.innerHTML = m + ":" + s +":"+ms
+        document.getElementById('list-record').appendChild(_li)
+    })
+
+    document.getElementById('reset').addEventListener('click', function(){
+        clearInterval(temp)
+             
+        
+         document.getElementById('list-record').innerHTML = ""
+        location.reload()
+    })
+
+
+
+    function time(){
+        if (ms<99){
+            ms++
+            if(ms<10){
+                _span[2].innerHTML = "0"+ms
+            }else{
+                _span[2].innerHTML = ms
+            }
+        }else{
+            ms=0
+            if(s<59){
+                s++
+                if(s<10){
+                    _span[1].innerHTML = "0"+s
+                }else{
+                    _span[1].innerHTML= s
+                }
+            }else{
+                s=0
+                m++
+                if(m<10){
+                    _span[0].innerHTML = '0'+m
+                }else{
+                    _span[0].innerHTML = m
+                }
+            }
+        }
+    }
+</script>
+</html>

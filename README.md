@@ -2,7 +2,7 @@
 
 - [Demo Project](https://humayb.github.io/stopwatch/)
 
-- UI Designer and Developer: Homa BahramParvar
+- Developer: Homa BahramParvar
 - Technologies Used - Html , CSS
 
 
